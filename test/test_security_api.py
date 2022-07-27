@@ -11,8 +11,8 @@
 
 import unittest
 
-import sdn-client
-from sdn-client.api.security_api import SecurityApi  # noqa: E501
+import sdnclient
+from sdnclient.api.security_api import SecurityApi  # noqa: E501
 
 
 class TestSecurityApi(unittest.TestCase):

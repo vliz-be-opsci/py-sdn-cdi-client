@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.login import Login
+import sdnclient
+from sdnclient.model.login import Login
 
 
 class TestLogin(unittest.TestCase):

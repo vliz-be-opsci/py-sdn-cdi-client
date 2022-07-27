@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.metadata_query_return_result_inner import MetadataQueryReturnResultInner
+import sdnclient
+from sdnclient.model.metadata_query_return_result_inner import MetadataQueryReturnResultInner
 
 
 class TestMetadataQueryReturnResultInner(unittest.TestCase):

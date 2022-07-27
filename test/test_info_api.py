@@ -11,8 +11,8 @@
 
 import unittest
 
-import sdn-client
-from sdn-client.api.info_api import InfoApi  # noqa: E501
+import sdnclient
+from sdnclient.api.info_api import InfoApi  # noqa: E501
 
 
 class TestInfoApi(unittest.TestCase):

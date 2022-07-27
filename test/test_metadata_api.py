@@ -11,8 +11,8 @@
 
 import unittest
 
-import sdn-client
-from sdn-client.api.metadata_api import MetadataApi  # noqa: E501
+import sdnclient
+from sdnclient.api.metadata_api import MetadataApi  # noqa: E501
 
 
 class TestMetadataApi(unittest.TestCase):

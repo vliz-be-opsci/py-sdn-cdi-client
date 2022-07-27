@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.order_query_query_fields import OrderQueryQueryFields
+import sdnclient
+from sdnclient.model.order_query_query_fields import OrderQueryQueryFields
 globals()['OrderQueryQueryFields'] = OrderQueryQueryFields
-from sdn-client.model.order_query import OrderQuery
+from sdnclient.model.order_query import OrderQuery
 
 
 class TestOrderQuery(unittest.TestCase):

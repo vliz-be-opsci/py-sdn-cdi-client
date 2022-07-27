@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.metadata_query_return_facet_search_inner_facet_field1 import MetadataQueryReturnFacetSearchInnerFacetField1
+import sdnclient
+from sdnclient.model.metadata_query_return_facet_search_inner_facet_field1 import MetadataQueryReturnFacetSearchInnerFacetField1
 globals()['MetadataQueryReturnFacetSearchInnerFacetField1'] = MetadataQueryReturnFacetSearchInnerFacetField1
-from sdn-client.model.metadata_query_return_facet_search_inner import MetadataQueryReturnFacetSearchInner
+from sdnclient.model.metadata_query_return_facet_search_inner import MetadataQueryReturnFacetSearchInner
 
 
 class TestMetadataQueryReturnFacetSearchInner(unittest.TestCase):

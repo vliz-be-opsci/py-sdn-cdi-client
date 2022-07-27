@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.order_query_query_fields import OrderQueryQueryFields
+import sdnclient
+from sdnclient.model.order_query_query_fields import OrderQueryQueryFields
 
 
 class TestOrderQueryQueryFields(unittest.TestCase):

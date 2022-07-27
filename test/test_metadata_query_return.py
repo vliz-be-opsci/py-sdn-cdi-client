@@ -12,16 +12,16 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.metadata_query_return_facet_search_inner import MetadataQueryReturnFacetSearchInner
-from sdn-client.model.metadata_query_return_result_inner import MetadataQueryReturnResultInner
-from sdn-client.model.metadata_query_return_you_search_for_translation_inner import MetadataQueryReturnYouSearchForTranslationInner
-from sdn-client.model.order_query_return_warnings import OrderQueryReturnWarnings
+import sdnclient
+from sdnclient.model.metadata_query_return_facet_search_inner import MetadataQueryReturnFacetSearchInner
+from sdnclient.model.metadata_query_return_result_inner import MetadataQueryReturnResultInner
+from sdnclient.model.metadata_query_return_you_search_for_translation_inner import MetadataQueryReturnYouSearchForTranslationInner
+from sdnclient.model.order_query_return_warnings import OrderQueryReturnWarnings
 globals()['MetadataQueryReturnFacetSearchInner'] = MetadataQueryReturnFacetSearchInner
 globals()['MetadataQueryReturnResultInner'] = MetadataQueryReturnResultInner
 globals()['MetadataQueryReturnYouSearchForTranslationInner'] = MetadataQueryReturnYouSearchForTranslationInner
 globals()['OrderQueryReturnWarnings'] = OrderQueryReturnWarnings
-from sdn-client.model.metadata_query_return import MetadataQueryReturn
+from sdnclient.model.metadata_query_return import MetadataQueryReturn
 
 
 class TestMetadataQueryReturn(unittest.TestCase):

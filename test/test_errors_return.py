@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.errors_return import ErrorsReturn
+import sdnclient
+from sdnclient.model.errors_return import ErrorsReturn
 
 
 class TestErrorsReturn(unittest.TestCase):

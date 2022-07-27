@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdn-client
-from sdn-client.model.login_post200_response import LoginPost200Response
+import sdnclient
+from sdnclient.model.login_post200_response import LoginPost200Response
 
 
 class TestLoginPost200Response(unittest.TestCase):

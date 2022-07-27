@@ -1,4 +1,4 @@
-# sdn-client.MetadataApi
+# sdnclient.MetadataApi
 
 All URIs are relative to *https://seadatanet-buffer5.maris.nl/api_v5.1*
 
@@ -20,15 +20,15 @@ Make a query and recieve the results and also the facet search info returned
 
 ```python
 import time
-import sdn-client
-from sdn-client.api import metadata_api
-from sdn-client.model.errors_return import ErrorsReturn
-from sdn-client.model.metadata_query_return import MetadataQueryReturn
-from sdn-client.model.metadata_query import MetadataQuery
+import sdnclient
+from sdnclient.api import metadata_api
+from sdnclient.model.errors_return import ErrorsReturn
+from sdnclient.model.metadata_query_return import MetadataQueryReturn
+from sdnclient.model.metadata_query import MetadataQuery
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdn-client.Configuration(
+configuration = sdnclient.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -38,12 +38,12 @@ configuration = sdn-client.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdn-client.Configuration(
+configuration = sdnclient.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdn-client.ApiClient(configuration) as api_client:
+with sdnclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
     metadata_query = MetadataQuery(
@@ -79,7 +79,7 @@ with sdn-client.ApiClient(configuration) as api_client:
         # Make a query and get the metadata back
         api_response = api_instance.metadata_query_post(metadata_query)
         pprint(api_response)
-    except sdn-client.ApiException as e:
+    except sdnclient.ApiException as e:
         print("Exception when calling MetadataApi->metadata_query_post: %s\n" % e)
 ```
 
