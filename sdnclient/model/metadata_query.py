@@ -73,6 +73,7 @@ class MetadataQuery(ModelNormal):
         },
         ('return_fields',): {
             'N_CODE': "n_code",
+            'LAST_UPDATE': "last_update",
             'DATANAME': "dataname",
             'CDI_IDENTIFIER': "cdi_identifier",
             'C_ORIGINATOR_EDMO_COUNTRY': "c_originator_edmo_country",
@@ -89,6 +90,7 @@ class MetadataQuery(ModelNormal):
         },
         ('pagination_sort',): {
             'N_CODE': "n_code",
+            'LAST_UPDATE': "last_update",
             'DATANAME': "dataname",
             'CDI_IDENTIFIER': "cdi_identifier",
             'C_ORIGINATOR_EDMO_COUNTRY': "c_originator_edmo_country",
