@@ -148,8 +148,8 @@ class MetadataQuery(ModelNormal):
             'return_fields': ([str],),  # noqa: E501
             'pagination_page': (int,),  # noqa: E501
             'pagination_count': (int,),  # noqa: E501
-            'pagination_sort': ([str],),  # noqa: E501
-            'pagination_sort_type': ([str],),  # noqa: E501
+            'pagination_sort': (str,),  # noqa: E501
+            'pagination_sort_type': (str,),  # noqa: E501
             'query_fields': (OrderQueryQueryFields,),  # noqa: E501
         }
 
