@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_details_return_download_data_unrestricted import OrderDetailsReturnDownloadDataUnrestricted
+import cdi_sdn_py
+from cdi_sdn_py.model.order_details_return_download_data_unrestricted import OrderDetailsReturnDownloadDataUnrestricted
 
 
 class TestOrderDetailsReturnDownloadDataUnrestricted(unittest.TestCase):

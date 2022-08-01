@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_details_return_download_csv import OrderDetailsReturnDownloadCsv
+import cdi_sdn_py
+from cdi_sdn_py.model.order_details_return_download_csv import OrderDetailsReturnDownloadCsv
 
 
 class TestOrderDetailsReturnDownloadCsv(unittest.TestCase):

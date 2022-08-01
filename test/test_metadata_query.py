@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_query_query_fields import OrderQueryQueryFields
+import cdi_sdn_py
+from cdi_sdn_py.model.order_query_query_fields import OrderQueryQueryFields
 globals()['OrderQueryQueryFields'] = OrderQueryQueryFields
-from sdnclient.model.metadata_query import MetadataQuery
+from cdi_sdn_py.model.metadata_query import MetadataQuery
 
 
 class TestMetadataQuery(unittest.TestCase):

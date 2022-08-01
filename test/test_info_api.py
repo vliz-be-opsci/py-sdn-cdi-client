@@ -11,8 +11,8 @@
 
 import unittest
 
-import sdnclient
-from sdnclient.api.info_api import InfoApi  # noqa: E501
+import cdi_sdn_py
+from cdi_sdn_py.api.info_api import InfoApi  # noqa: E501
 
 
 class TestInfoApi(unittest.TestCase):
@@ -22,6 +22,13 @@ class TestInfoApi(unittest.TestCase):
         self.api = InfoApi()  # noqa: E501
 
     def tearDown(self):
+        pass
+
+    def test_reference_list_output_type_get(self):
+        """Test case for reference_list_output_type_get
+
+        Reference_list  # noqa: E501
+        """
         pass
 
     def test_status_get(self):

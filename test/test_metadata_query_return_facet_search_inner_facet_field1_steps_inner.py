@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.metadata_query_return_facet_search_inner_facet_field1_steps_inner import MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
+import cdi_sdn_py
+from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1_steps_inner import MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
 
 
 class TestMetadataQueryReturnFacetSearchInnerFacetField1StepsInner(unittest.TestCase):

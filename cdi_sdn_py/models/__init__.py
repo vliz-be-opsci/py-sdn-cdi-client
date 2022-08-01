@@ -1,0 +1,35 @@
+# flake8: noqa
+
+# import all models into this package
+# if you have many models here with many references from one model to another this may
+# raise a RecursionError
+# to avoid this, import only the models that you directly need like:
+# from from cdi_sdn_py.model.pet import Pet
+# or import this package, but before doing it, use:
+# import sys
+# sys.setrecursionlimit(n)
+
+from cdi_sdn_py.model.errors_return import ErrorsReturn
+from cdi_sdn_py.model.login import Login
+from cdi_sdn_py.model.login_post200_response import LoginPost200Response
+from cdi_sdn_py.model.metadata_query import MetadataQuery
+from cdi_sdn_py.model.metadata_query_return import MetadataQueryReturn
+from cdi_sdn_py.model.metadata_query_return_facet_search_inner import MetadataQueryReturnFacetSearchInner
+from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1 import MetadataQueryReturnFacetSearchInnerFacetField1
+from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1_steps_inner import MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
+from cdi_sdn_py.model.metadata_query_return_result_inner import MetadataQueryReturnResultInner
+from cdi_sdn_py.model.metadata_query_return_you_search_for_translation_inner import MetadataQueryReturnYouSearchForTranslationInner
+from cdi_sdn_py.model.metadata_query_return_you_search_for_translation_inner_query_field1 import MetadataQueryReturnYouSearchForTranslationInnerQueryField1
+from cdi_sdn_py.model.metadata_query_return_you_search_for_translation_inner_query_field2 import MetadataQueryReturnYouSearchForTranslationInnerQueryField2
+from cdi_sdn_py.model.order_details_return import OrderDetailsReturn
+from cdi_sdn_py.model.order_details_return_download import OrderDetailsReturnDownload
+from cdi_sdn_py.model.order_details_return_download_csv import OrderDetailsReturnDownloadCsv
+from cdi_sdn_py.model.order_details_return_download_data import OrderDetailsReturnDownloadData
+from cdi_sdn_py.model.order_details_return_download_data_unrestricted import OrderDetailsReturnDownloadDataUnrestricted
+from cdi_sdn_py.model.order_list_return import OrderListReturn
+from cdi_sdn_py.model.order_list_return_orders_inner import OrderListReturnOrdersInner
+from cdi_sdn_py.model.order_list_return_orders_inner_order_number import OrderListReturnOrdersInnerOrderNumber
+from cdi_sdn_py.model.order_query import OrderQuery
+from cdi_sdn_py.model.order_query_query_fields import OrderQueryQueryFields
+from cdi_sdn_py.model.order_query_return import OrderQueryReturn
+from cdi_sdn_py.model.order_query_return_warnings import OrderQueryReturnWarnings

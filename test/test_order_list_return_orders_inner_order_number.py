@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_list_return_orders_inner_order_number import OrderListReturnOrdersInnerOrderNumber
+import cdi_sdn_py
+from cdi_sdn_py.model.order_list_return_orders_inner_order_number import OrderListReturnOrdersInnerOrderNumber
 
 
 class TestOrderListReturnOrdersInnerOrderNumber(unittest.TestCase):

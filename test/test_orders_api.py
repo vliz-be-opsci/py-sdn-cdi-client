@@ -11,8 +11,8 @@
 
 import unittest
 
-import sdnclient
-from sdnclient.api.orders_api import OrdersApi  # noqa: E501
+import cdi_sdn_py
+from cdi_sdn_py.api.orders_api import OrdersApi  # noqa: E501
 
 
 class TestOrdersApi(unittest.TestCase):

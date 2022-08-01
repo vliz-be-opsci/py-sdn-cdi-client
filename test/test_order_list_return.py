@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_list_return_orders_inner import OrderListReturnOrdersInner
+import cdi_sdn_py
+from cdi_sdn_py.model.order_list_return_orders_inner import OrderListReturnOrdersInner
 globals()['OrderListReturnOrdersInner'] = OrderListReturnOrdersInner
-from sdnclient.model.order_list_return import OrderListReturn
+from cdi_sdn_py.model.order_list_return import OrderListReturn
 
 
 class TestOrderListReturn(unittest.TestCase):

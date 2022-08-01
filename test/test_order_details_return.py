@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_details_return_download import OrderDetailsReturnDownload
+import cdi_sdn_py
+from cdi_sdn_py.model.order_details_return_download import OrderDetailsReturnDownload
 globals()['OrderDetailsReturnDownload'] = OrderDetailsReturnDownload
-from sdnclient.model.order_details_return import OrderDetailsReturn
+from cdi_sdn_py.model.order_details_return import OrderDetailsReturn
 
 
 class TestOrderDetailsReturn(unittest.TestCase):

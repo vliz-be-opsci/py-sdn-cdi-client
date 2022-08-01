@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.metadata_query_return_you_search_for_translation_inner_query_field2 import MetadataQueryReturnYouSearchForTranslationInnerQueryField2
+import cdi_sdn_py
+from cdi_sdn_py.model.metadata_query_return_you_search_for_translation_inner_query_field2 import MetadataQueryReturnYouSearchForTranslationInnerQueryField2
 
 
 class TestMetadataQueryReturnYouSearchForTranslationInnerQueryField2(unittest.TestCase):

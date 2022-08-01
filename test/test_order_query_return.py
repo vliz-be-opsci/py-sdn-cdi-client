@@ -12,10 +12,10 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_query_return_warnings import OrderQueryReturnWarnings
+import cdi_sdn_py
+from cdi_sdn_py.model.order_query_return_warnings import OrderQueryReturnWarnings
 globals()['OrderQueryReturnWarnings'] = OrderQueryReturnWarnings
-from sdnclient.model.order_query_return import OrderQueryReturn
+from cdi_sdn_py.model.order_query_return import OrderQueryReturn
 
 
 class TestOrderQueryReturn(unittest.TestCase):

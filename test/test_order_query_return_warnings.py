@@ -12,8 +12,8 @@
 import sys
 import unittest
 
-import sdnclient
-from sdnclient.model.order_query_return_warnings import OrderQueryReturnWarnings
+import cdi_sdn_py
+from cdi_sdn_py.model.order_query_return_warnings import OrderQueryReturnWarnings
 
 
 class TestOrderQueryReturnWarnings(unittest.TestCase):
