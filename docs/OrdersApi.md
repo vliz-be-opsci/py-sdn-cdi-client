@@ -78,16 +78,16 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/json, application/zip
+ - **Accept**: application/zip, application/json
 
 
 ### HTTP response details
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | The metadata from this order in CSV format zipped |  -  |
 **400** | Bad Request |  -  |
 **401** | Invalid token |  -  |
-**200** | The metadata from this order in CSV format zipped |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -165,9 +165,9 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | Successful operation |  -  |
 **400** | Bad Request |  -  |
 **401** | Invalid token |  -  |
-**200** | Successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -214,7 +214,7 @@ with cdi_sdn_py.ApiClient(configuration) as api_client:
         user_order_name="user_order_name_example",
         motivation="motivation_example",
         data_format_l24=[
-            "data_format_l24_example",
+            "odv",
         ],
         query_fields=OrderQueryQueryFields(
             free_search="water",
@@ -273,9 +273,9 @@ Name | Type | Description  | Notes
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | Successful operation |  -  |
 **400** | Bad Request |  -  |
 **401** | Invalid token |  -  |
-**200** | Successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
@@ -349,9 +349,9 @@ This endpoint does not need any parameter.
 
 | Status code | Description | Response headers |
 |-------------|-------------|------------------|
+**200** | Successful operation |  -  |
 **400** | Bad Request |  -  |
 **401** | Invalid token |  -  |
-**200** | Successful operation |  -  |
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

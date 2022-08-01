@@ -60,6 +60,10 @@ class OrderQuery(ModelNormal):
     """
 
     allowed_values = {
+        ('data_format_l24',): {
+            'ODV': "odv",
+            'BODV': "bodv",
+        },
     }
 
     validations = {
@@ -93,9 +97,9 @@ class OrderQuery(ModelNormal):
         """
         lazy_import()
         return {
-            'user_order_name': (str,),  # noqa: E501
             'motivation': (str,),  # noqa: E501
             'data_format_l24': ([str],),  # noqa: E501
+            'user_order_name': (str,),  # noqa: E501
             'query_fields': (OrderQueryQueryFields,),  # noqa: E501
         }
 
@@ -105,9 +109,9 @@ class OrderQuery(ModelNormal):
 
 
     attribute_map = {
-        'user_order_name': 'user_order_name',  # noqa: E501
         'motivation': 'motivation',  # noqa: E501
         'data_format_l24': 'data_format_L24',  # noqa: E501
+        'user_order_name': 'user_order_name',  # noqa: E501
         'query_fields': 'query_fields',  # noqa: E501
     }
 
@@ -118,8 +122,12 @@ class OrderQuery(ModelNormal):
 
     @classmethod
     @convert_js_args_to_python_args
-    def _from_openapi_data(cls, *args, **kwargs):  # noqa: E501
+    def _from_openapi_data(cls, motivation, data_format_l24, *args, **kwargs):  # noqa: E501
         """OrderQuery - a model defined in OpenAPI
+
+        Args:
+            motivation (str):
+            data_format_l24 ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -153,8 +161,6 @@ class OrderQuery(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             user_order_name (str): your name of this order. [optional]  # noqa: E501
-            motivation (str): [optional]  # noqa: E501
-            data_format_l24 ([str]): [optional]  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 
@@ -187,6 +193,8 @@ class OrderQuery(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.motivation = motivation
+        self.data_format_l24 = data_format_l24
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \
@@ -207,8 +215,12 @@ class OrderQuery(ModelNormal):
     ])
 
     @convert_js_args_to_python_args
-    def __init__(self, *args, **kwargs):  # noqa: E501
+    def __init__(self, motivation, data_format_l24, *args, **kwargs):  # noqa: E501
         """OrderQuery - a model defined in OpenAPI
+
+        Args:
+            motivation (str):
+            data_format_l24 ([str]):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -242,8 +254,6 @@ class OrderQuery(ModelNormal):
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
             user_order_name (str): your name of this order. [optional]  # noqa: E501
-            motivation (str): [optional]  # noqa: E501
-            data_format_l24 ([str]): [optional]  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 
@@ -274,6 +284,8 @@ class OrderQuery(ModelNormal):
         self._configuration = _configuration
         self._visited_composed_classes = _visited_composed_classes + (self.__class__,)
 
+        self.motivation = motivation
+        self.data_format_l24 = data_format_l24
         for var_name, var_value in kwargs.items():
             if var_name not in self.attribute_map and \
                         self._configuration is not None and \

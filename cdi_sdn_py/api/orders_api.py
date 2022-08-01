@@ -97,8 +97,8 @@ class OrdersApi(object):
             },
             headers_map={
                 'accept': [
-                    'application/json',
-                    'application/zip'
+                    'application/zip',
+                    'application/json'
                 ],
                 'content_type': [],
             },
