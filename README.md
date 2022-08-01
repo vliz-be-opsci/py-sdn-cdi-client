@@ -72,12 +72,13 @@ configuration = sdnclient.Configuration(
 with sdnclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = info_api.InfoApi(api_client)
+    output_type = "html" # str | 
 
     try:
-        # Status
-        api_instance.status_get()
+        # Reference_list
+        api_instance.reference_list_output_type_get(output_type)
     except sdnclient.ApiException as e:
-        print("Exception when calling InfoApi->status_get: %s\n" % e)
+        print("Exception when calling InfoApi->reference_list_output_type_get: %s\n" % e)
 ```
 
 ## Documentation for API Endpoints
@@ -86,6 +87,7 @@ All URIs are relative to *https://seadatanet-buffer5.maris.nl/api_v5.1*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*InfoApi* | [**reference_list_output_type_get**](docs/InfoApi.md#reference_list_output_type_get) | **GET** /reference_list/{outputType} | Reference_list
 *InfoApi* | [**status_get**](docs/InfoApi.md#status_get) | **GET** /status | Status
 *MetadataApi* | [**metadata_query_post**](docs/MetadataApi.md#metadata_query_post) | **POST** /metadata/query | Make a query and get the metadata back
 *OrdersApi* | [**order_download_csv_order_number_restriction_get**](docs/OrdersApi.md#order_download_csv_order_number_restriction_get) | **GET** /order/download/csv/{orderNumber}/{restriction} | Download metadata CSV for this order

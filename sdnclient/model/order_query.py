@@ -63,6 +63,11 @@ class OrderQuery(ModelNormal):
     }
 
     validations = {
+        ('motivation',): {
+            'max_length': 500,
+        },
+        ('data_format_l24',): {
+        },
     }
 
     @cached_property
@@ -90,7 +95,7 @@ class OrderQuery(ModelNormal):
         return {
             'user_order_name': (str,),  # noqa: E501
             'motivation': (str,),  # noqa: E501
-            'data_format_l24': (str,),  # noqa: E501
+            'data_format_l24': ([str],),  # noqa: E501
             'query_fields': (OrderQueryQueryFields,),  # noqa: E501
         }
 
@@ -149,7 +154,7 @@ class OrderQuery(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             user_order_name (str): your name of this order. [optional]  # noqa: E501
             motivation (str): [optional]  # noqa: E501
-            data_format_l24 (str): [optional]  # noqa: E501
+            data_format_l24 ([str]): [optional]  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 
@@ -238,7 +243,7 @@ class OrderQuery(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             user_order_name (str): your name of this order. [optional]  # noqa: E501
             motivation (str): [optional]  # noqa: E501
-            data_format_l24 (str): [optional]  # noqa: E501
+            data_format_l24 ([str]): [optional]  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 

@@ -74,6 +74,22 @@ class OrderQueryQueryFields(ModelNormal):
                 'pattern': r'^\d{4}(0[1-9]|1[012])(0[1-9]|[12][0-9]|3[01])$',  # noqa: E501
             },
         },
+        ('north',): {
+            'inclusive_maximum': 90,
+            'inclusive_minimum': -90,
+        },
+        ('east',): {
+            'inclusive_maximum': 180,
+            'inclusive_minimum': -180,
+        },
+        ('south',): {
+            'inclusive_maximum': 90,
+            'inclusive_minimum': -90,
+        },
+        ('west',): {
+            'inclusive_maximum': 180,
+            'inclusive_minimum': -180,
+        },
     }
 
     @cached_property
@@ -108,7 +124,7 @@ class OrderQueryQueryFields(ModelNormal):
             'author_edmo': (int,),  # noqa: E501
             'author_edmo_country': (int,),  # noqa: E501
             'originator_edmo': (str,),  # noqa: E501
-            'measuring_area_type_l02': (str,),  # noqa: E501
+            'measuring_area_type_l02': ([str],),  # noqa: E501
             'parameters_p02': (str,),  # noqa: E501
             'parameters_p03': (str,),  # noqa: E501
             'parameters_p08': (str,),  # noqa: E501
@@ -193,7 +209,7 @@ class OrderQueryQueryFields(ModelNormal):
             author_edmo (int): Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo). [optional]  # noqa: E501
             author_edmo_country (int): Only one value is possble, See [reference list author_edmo_country](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo_country). [optional]  # noqa: E501
             originator_edmo (str): if multiple options then use comma seperated values, See [reference list originator_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/originator_edmo). [optional]  # noqa: E501
-            measuring_area_type_l02 (str): Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02). [optional]  # noqa: E501
+            measuring_area_type_l02 ([str]): Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02). [optional]  # noqa: E501
             parameters_p02 (str): if multiple options then use comma seperated values, See [reference list parameters_P02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p02). [optional]  # noqa: E501
             parameters_p03 (str): if multiple options then use comma seperated values, See [reference list parameters_P03](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p03). [optional]  # noqa: E501
             parameters_p08 (str): if multiple options then use comma seperated values, See [reference list parameters_p08](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p08). [optional]  # noqa: E501
@@ -295,7 +311,7 @@ class OrderQueryQueryFields(ModelNormal):
             author_edmo (int): Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo). [optional]  # noqa: E501
             author_edmo_country (int): Only one value is possble, See [reference list author_edmo_country](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo_country). [optional]  # noqa: E501
             originator_edmo (str): if multiple options then use comma seperated values, See [reference list originator_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/originator_edmo). [optional]  # noqa: E501
-            measuring_area_type_l02 (str): Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02). [optional]  # noqa: E501
+            measuring_area_type_l02 ([str]): Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02). [optional]  # noqa: E501
             parameters_p02 (str): if multiple options then use comma seperated values, See [reference list parameters_P02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p02). [optional]  # noqa: E501
             parameters_p03 (str): if multiple options then use comma seperated values, See [reference list parameters_P03](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p03). [optional]  # noqa: E501
             parameters_p08 (str): if multiple options then use comma seperated values, See [reference list parameters_p08](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p08). [optional]  # noqa: E501

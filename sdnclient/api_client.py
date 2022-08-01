@@ -803,10 +803,10 @@ class Endpoint(object):
         Example:
 
         api_instance = InfoApi()
-        api_instance.status_get  # this is an instance of the class Endpoint
-        api_instance.status_get()  # this invokes api_instance.status_get.__call__()
+        api_instance.reference_list_output_type_get  # this is an instance of the class Endpoint
+        api_instance.reference_list_output_type_get()  # this invokes api_instance.reference_list_output_type_get.__call__()
         which then invokes the callable functions stored in that endpoint at
-        api_instance.status_get.callable or self.callable in this class
+        api_instance.reference_list_output_type_get.callable or self.callable in this class
 
         """
         return self.callable(self, *args, **kwargs)

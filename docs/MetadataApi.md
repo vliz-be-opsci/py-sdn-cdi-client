@@ -47,12 +47,20 @@ with sdnclient.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = metadata_api.MetadataApi(api_client)
     metadata_query = MetadataQuery(
-        facet_fields="parameters_p08,parameters_p03,parameters_p02",
-        return_fields="n_code,dataname,cdi_identifier,c_originator_edmo_country,start_date,end_date,c_instrument_l05,version,data_format_l24,bbox_north,bbox_east,bbox_south,bbox_west,c_measuring_area_type_l02",
-        pagination_page=1,
-        pagination_count=1,
-        pagination_sort="n_code",
-        pagination_sort_type="asc",
+        facet_fields=[
+            "measuring_area_type_l02",
+        ],
+        return_fields=[
+            "n_code",
+        ],
+        pagination_page=20,
+        pagination_count=0,
+        pagination_sort=[
+            "n_code",
+        ],
+        pagination_sort_type=[
+            "asc",
+        ],
         query_fields=OrderQueryQueryFields(
             free_search="water",
             start_date="20100827",
@@ -65,7 +73,9 @@ with sdnclient.ApiClient(configuration) as api_client:
             author_edmo=634,
             author_edmo_country=24,
             originator_edmo="634",
-            measuring_area_type_l02="3",
+            measuring_area_type_l02=[
+                "3",
+            ],
             parameters_p02="aslv",
             parameters_p03="c045",
             parameters_p08="ds04",
