@@ -1,4 +1,4 @@
-# sdnclient.InfoApi
+# cdi_sdn_py.InfoApi
 
 All URIs are relative to *https://seadatanet-buffer5.maris.nl/api_v5.1*
 
@@ -19,13 +19,13 @@ Reference_list
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import info_api
-from sdnclient.model.errors_return import ErrorsReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import info_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -35,12 +35,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = info_api.InfoApi(api_client)
     output_type = "html" # str | 
@@ -49,7 +49,7 @@ with sdnclient.ApiClient(configuration) as api_client:
     try:
         # Reference_list
         api_instance.reference_list_output_type_get(output_type)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling InfoApi->reference_list_output_type_get: %s\n" % e)
 ```
 
@@ -95,13 +95,13 @@ Status
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import info_api
-from sdnclient.model.errors_return import ErrorsReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import info_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -111,12 +111,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = info_api.InfoApi(api_client)
 
@@ -124,7 +124,7 @@ with sdnclient.ApiClient(configuration) as api_client:
     try:
         # Status
         api_instance.status_get()
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling InfoApi->status_get: %s\n" % e)
 ```
 

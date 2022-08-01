@@ -1,4 +1,4 @@
-# sdnclient.OrdersApi
+# cdi_sdn_py.OrdersApi
 
 All URIs are relative to *https://seadatanet-buffer5.maris.nl/api_v5.1*
 
@@ -23,13 +23,13 @@ Download the metadata in CSV format to get metadata for this order
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import orders_api
-from sdnclient.model.errors_return import ErrorsReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import orders_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -39,12 +39,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = orders_api.OrdersApi(api_client)
     order_number = 1 # int | 
@@ -55,7 +55,7 @@ with sdnclient.ApiClient(configuration) as api_client:
         # Download metadata CSV for this order
         api_response = api_instance.order_download_csv_order_number_restriction_get(order_number, restriction)
         pprint(api_response)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling OrdersApi->order_download_csv_order_number_restriction_get: %s\n" % e)
 ```
 
@@ -104,14 +104,14 @@ Returns a single order including download if available
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import orders_api
-from sdnclient.model.order_details_return import OrderDetailsReturn
-from sdnclient.model.errors_return import ErrorsReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import orders_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
+from cdi_sdn_py.model.order_details_return import OrderDetailsReturn
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -121,12 +121,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = orders_api.OrdersApi(api_client)
     order_number = 1 # int | 
@@ -136,7 +136,7 @@ with sdnclient.ApiClient(configuration) as api_client:
         # Find order by Ordernumber
         api_response = api_instance.order_order_number_get(order_number)
         pprint(api_response)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling OrdersApi->order_order_number_get: %s\n" % e)
 ```
 
@@ -184,15 +184,15 @@ Make an order from all requested records with specified fields
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import orders_api
-from sdnclient.model.errors_return import ErrorsReturn
-from sdnclient.model.order_query import OrderQuery
-from sdnclient.model.order_query_return import OrderQueryReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import orders_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
+from cdi_sdn_py.model.order_query_return import OrderQueryReturn
+from cdi_sdn_py.model.order_query import OrderQuery
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -202,12 +202,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = orders_api.OrdersApi(api_client)
     order_query = OrderQuery(
@@ -244,7 +244,7 @@ with sdnclient.ApiClient(configuration) as api_client:
         # Make an order by query
         api_response = api_instance.order_query_post(order_query)
         pprint(api_response)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling OrdersApi->order_query_post: %s\n" % e)
 ```
 
@@ -292,14 +292,14 @@ Returns a list of all your order not older then 30 days
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import orders_api
-from sdnclient.model.errors_return import ErrorsReturn
-from sdnclient.model.order_list_return import OrderListReturn
+import cdi_sdn_py
+from cdi_sdn_py.api import orders_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
+from cdi_sdn_py.model.order_list_return import OrderListReturn
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
@@ -309,12 +309,12 @@ configuration = sdnclient.Configuration(
 # satisfies your auth use case.
 
 # Configure Bearer authorization (bearerToken): bearerAuth
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     access_token = 'YOUR_BEARER_TOKEN'
 )
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient(configuration) as api_client:
+with cdi_sdn_py.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = orders_api.OrdersApi(api_client)
 
@@ -323,7 +323,7 @@ with sdnclient.ApiClient(configuration) as api_client:
         # Show all your relevant orders from 30 days or less
         api_response = api_instance.orderlist_get()
         pprint(api_response)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling OrdersApi->orderlist_get: %s\n" % e)
 ```
 

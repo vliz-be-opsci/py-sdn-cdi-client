@@ -1,4 +1,4 @@
-# sdnclient.SecurityApi
+# cdi_sdn_py.SecurityApi
 
 All URIs are relative to *https://seadatanet-buffer5.maris.nl/api_v5.1*
 
@@ -17,21 +17,21 @@ Normal login
 
 ```python
 import time
-import sdnclient
-from sdnclient.api import security_api
-from sdnclient.model.login import Login
-from sdnclient.model.errors_return import ErrorsReturn
-from sdnclient.model.login_post200_response import LoginPost200Response
+import cdi_sdn_py
+from cdi_sdn_py.api import security_api
+from cdi_sdn_py.model.errors_return import ErrorsReturn
+from cdi_sdn_py.model.login_post200_response import LoginPost200Response
+from cdi_sdn_py.model.login import Login
 from pprint import pprint
 # Defining the host is optional and defaults to https://seadatanet-buffer5.maris.nl/api_v5.1
 # See configuration.py for a list of all supported configuration parameters.
-configuration = sdnclient.Configuration(
+configuration = cdi_sdn_py.Configuration(
     host = "https://seadatanet-buffer5.maris.nl/api_v5.1"
 )
 
 
 # Enter a context with an instance of the API client
-with sdnclient.ApiClient() as api_client:
+with cdi_sdn_py.ApiClient() as api_client:
     # Create an instance of the API class
     api_instance = security_api.SecurityApi(api_client)
     login = Login(
@@ -44,7 +44,7 @@ with sdnclient.ApiClient() as api_client:
         # Normal login
         api_response = api_instance.login_post(login)
         pprint(api_response)
-    except sdnclient.ApiException as e:
+    except cdi_sdn_py.ApiException as e:
         print("Exception when calling SecurityApi->login_post: %s\n" % e)
 ```
 
