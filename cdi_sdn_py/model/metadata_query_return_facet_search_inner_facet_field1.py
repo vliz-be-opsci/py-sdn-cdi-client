@@ -31,9 +31,7 @@ from cdi_sdn_py.exceptions import ApiAttributeError
 
 
 def lazy_import():
-    from cdi_sdn_py.model.facet_field1 import FacetField1
     from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1_steps_inner import MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
-    globals()['FacetField1'] = FacetField1
     globals()['MetadataQueryReturnFacetSearchInnerFacetField1StepsInner'] = MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
 
 
@@ -92,7 +90,7 @@ class MetadataQueryReturnFacetSearchInnerFacetField1(ModelNormal):
         return {
             'description': (str,),  # noqa: E501
             'title': (str,),  # noqa: E501
-            'field': (FacetField1,),  # noqa: E501
+            'field': (str,),  # noqa: E501
             'number': (int,),  # noqa: E501
             'steps': ([MetadataQueryReturnFacetSearchInnerFacetField1StepsInner],),  # noqa: E501
         }
@@ -153,7 +151,7 @@ class MetadataQueryReturnFacetSearchInnerFacetField1(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             description (str): [optional]  # noqa: E501
             title (str): [optional]  # noqa: E501
-            field (FacetField1): [optional]  # noqa: E501
+            field (str): [optional]  # noqa: E501
             number (int): [optional]  # noqa: E501
             steps ([MetadataQueryReturnFacetSearchInnerFacetField1StepsInner]): [optional]  # noqa: E501
         """
@@ -243,7 +241,7 @@ class MetadataQueryReturnFacetSearchInnerFacetField1(ModelNormal):
                                 _visited_composed_classes = (Animal,)
             description (str): [optional]  # noqa: E501
             title (str): [optional]  # noqa: E501
-            field (FacetField1): [optional]  # noqa: E501
+            field (str): [optional]  # noqa: E501
             number (int): [optional]  # noqa: E501
             steps ([MetadataQueryReturnFacetSearchInnerFacetField1StepsInner]): [optional]  # noqa: E501
         """

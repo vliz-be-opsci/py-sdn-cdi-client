@@ -13,9 +13,7 @@ import sys
 import unittest
 
 import cdi_sdn_py
-from cdi_sdn_py.model.facet_field1 import FacetField1
 from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1_steps_inner import MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
-globals()['FacetField1'] = FacetField1
 globals()['MetadataQueryReturnFacetSearchInnerFacetField1StepsInner'] = MetadataQueryReturnFacetSearchInnerFacetField1StepsInner
 from cdi_sdn_py.model.metadata_query_return_facet_search_inner_facet_field1 import MetadataQueryReturnFacetSearchInnerFacetField1
 
