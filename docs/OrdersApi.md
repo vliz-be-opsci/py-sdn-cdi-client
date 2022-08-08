@@ -213,9 +213,7 @@ with cdi_sdn_py.ApiClient(configuration) as api_client:
     order_query = OrderQuery(
         user_order_name="user_order_name_example",
         motivation="motivation_example",
-        data_format_l24=[
-            "odv",
-        ],
+        data_format_l24="odv",
         query_fields=OrderQueryQueryFields(
             free_search="water",
             start_date="20100827",
@@ -228,9 +226,7 @@ with cdi_sdn_py.ApiClient(configuration) as api_client:
             author_edmo=634,
             author_edmo_country=24,
             originator_edmo="634",
-            measuring_area_type_l02=[
-                "3",
-            ],
+            measuring_area_type_l02="3",
             parameters_p02="aslv",
             parameters_p03="c045",
             parameters_p08="ds04",

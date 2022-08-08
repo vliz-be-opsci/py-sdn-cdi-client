@@ -71,6 +71,7 @@ class OrderQuery(ModelNormal):
             'max_length': 500,
         },
         ('data_format_l24',): {
+            'max_length': 10,
         },
     }
 
@@ -98,7 +99,7 @@ class OrderQuery(ModelNormal):
         lazy_import()
         return {
             'motivation': (str,),  # noqa: E501
-            'data_format_l24': ([str],),  # noqa: E501
+            'data_format_l24': (str,),  # noqa: E501
             'user_order_name': (str,),  # noqa: E501
             'query_fields': (OrderQueryQueryFields,),  # noqa: E501
         }
@@ -127,7 +128,7 @@ class OrderQuery(ModelNormal):
 
         Args:
             motivation (str):
-            data_format_l24 ([str]):
+            data_format_l24 (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types
@@ -220,7 +221,7 @@ class OrderQuery(ModelNormal):
 
         Args:
             motivation (str):
-            data_format_l24 ([str]):
+            data_format_l24 (str):
 
         Keyword Args:
             _check_type (bool): if True, values for parameters in openapi_types

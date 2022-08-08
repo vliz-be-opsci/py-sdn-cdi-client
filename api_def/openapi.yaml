@@ -128,12 +128,9 @@ components:
         data_format_L24:
           type: string
           maxLength: 10
-          items:
-            type: string
-            # Changed "enum_single" to "enum": Item not array so enum single implied. 
-            enum:
-              - odv
-              - bodv 
+          enum:
+            - odv
+            - bodv 
         query_fields:
           xml:
             name: QueryFields
@@ -200,12 +197,10 @@ components:
             measuring_area_type_l02:
               type: string
               description: Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02)
-              items:
-                type: string
-                enum:
-                  - '3'
-                  - '4'
-                  - '6'
+              enum:
+                - '3'
+                - '4'
+                - '6'
             parameters_p02:
               type: string
               description: if multiple options then use comma seperated values, See [reference list parameters_P02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p02)
@@ -401,12 +396,10 @@ components:
             measuring_area_type_l02:
               type: string
               description: Only one value is possble, See [reference list measuring_area_type_L02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/measuring_area_type_l02)
-              items:
-                type: string
-                enum:
-                  - '3'
-                  - '4'
-                  - '6'
+              enum:
+                - '3'
+                - '4'
+                - '6'
             parameters_p02:
               type: string
               description: if multiple options then use comma seperated values, See [reference list parameters_P02](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/parameters_p02)
