@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **east** | **float** | Longitude (ddd.dd) from 180 to -180 | [optional] 
 **south** | **float** | Latitude (dd.dd) from 90 to -90 | [optional] 
 **west** | **float** | Longitude (ddd.dd) from 180 to -180 | [optional] 
-**inside** | **int** | if you want to search inside the bbox or not 0 &#x3D; normal; 1 &#x3D; inside) | [optional] 
+**inside** | **int** | if you want to search inside the bbox or not 0 &#x3D; normal; 1 &#x3D; inside) | [optional]  if omitted the server will use the default value of 1
 **author_edmo** | **int** | Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo) | [optional] 
 **author_edmo_country** | **int** | Only one value is possble, See [reference list author_edmo_country](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo_country) | [optional] 
 **originator_edmo** | **str** | if multiple options then use comma seperated values, See [reference list originator_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/originator_edmo) | [optional] 

@@ -205,7 +205,7 @@ class OrderQueryQueryFields(ModelNormal):
             east (float): Longitude (ddd.dd) from 180 to -180. [optional]  # noqa: E501
             south (float): Latitude (dd.dd) from 90 to -90. [optional]  # noqa: E501
             west (float): Longitude (ddd.dd) from 180 to -180. [optional]  # noqa: E501
-            inside (int): if you want to search inside the bbox or not 0 = normal; 1 = inside). [optional]  # noqa: E501
+            inside (int): if you want to search inside the bbox or not 0 = normal; 1 = inside). [optional] if omitted the server will use the default value of 1  # noqa: E501
             author_edmo (int): Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo). [optional]  # noqa: E501
             author_edmo_country (int): Only one value is possble, See [reference list author_edmo_country](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo_country). [optional]  # noqa: E501
             originator_edmo (str): if multiple options then use comma seperated values, See [reference list originator_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/originator_edmo). [optional]  # noqa: E501
@@ -307,7 +307,7 @@ class OrderQueryQueryFields(ModelNormal):
             east (float): Longitude (ddd.dd) from 180 to -180. [optional]  # noqa: E501
             south (float): Latitude (dd.dd) from 90 to -90. [optional]  # noqa: E501
             west (float): Longitude (ddd.dd) from 180 to -180. [optional]  # noqa: E501
-            inside (int): if you want to search inside the bbox or not 0 = normal; 1 = inside). [optional]  # noqa: E501
+            inside (int): if you want to search inside the bbox or not 0 = normal; 1 = inside). [optional] if omitted the server will use the default value of 1  # noqa: E501
             author_edmo (int): Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo). [optional]  # noqa: E501
             author_edmo_country (int): Only one value is possble, See [reference list author_edmo_country](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo_country). [optional]  # noqa: E501
             originator_edmo (str): if multiple options then use comma seperated values, See [reference list originator_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/originator_edmo). [optional]  # noqa: E501

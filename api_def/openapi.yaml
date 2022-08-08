@@ -184,7 +184,7 @@ components:
             inside:
               type: integer
               description: if you want to search inside the bbox or not 0 = normal; 1 = inside)
-              default: '1'
+              default: 1
             author_edmo:
               type: integer
               description: Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo)
@@ -257,9 +257,12 @@ components:
       type: object
       properties:
         facet_fields:
-          type: string
+          type: array
           description: if multiple options then use comma seperated values, See [reference list facet_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/facet_fields)
-          default: parameters_p08,parameters_p03,parameters_p02
+          default: 
+            - parameters_p08
+            - parameters_p03
+            - parameters_p02
           items:
             type: string
             enum:
@@ -273,9 +276,9 @@ components:
               - custodium_edmo
               - distributor_edmo
         return_fields:
-          type: string
+          type: array
           description: if multiple options then use comma seperated values, See [reference list return_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/return_fields)
-          default: n_code,dataname,cdi_identifier,c_originator_edmo_country,start_date,end_date,c_instrument_l05,version,data_format_l24,bbox_north,bbox_east,bbox_south,bbox_west,c_measuring_area_type_l02
+          default: [n_code,dataname,cdi_identifier,c_originator_edmo_country,start_date,end_date,c_instrument_l05,version,data_format_l24,bbox_north,bbox_east,bbox_south,bbox_west,c_measuring_area_type_l02]
           items:
             type: string
             enum:
@@ -309,32 +312,28 @@ components:
           type: string
           description: Field used for sorting the response, only one value is allowed, See [reference list pagination_sort](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/pagination_sort)
           default: n_code
-          items:
-            type: string
-            enum:
-              - n_code
-              - last_update
-              - dataname
-              - cdi_identifier
-              - c_originator_edmo_country
-              - start_date
-              - end_date
-              - c_instrument_l05
-              - version
-              - data_format_l24
-              - bbox_north
-              - bbox_east
-              - bbox_south
-              - bbox_west
-              - c_measuring_area_type_l02
+          enum:
+            - n_code
+            - last_update
+            - dataname
+            - cdi_identifier
+            - c_originator_edmo_country
+            - start_date
+            - end_date
+            - c_instrument_l05
+            - version
+            - data_format_l24
+            - bbox_north
+            - bbox_east
+            - bbox_south
+            - bbox_west
+            - c_measuring_area_type_l02
         pagination_sort_type:
           type: string
           description: Field use for sorting the response, only one value is allowed
-          items:
-            type: string
-            enum:
-              - asc
-              - desc
+          enum:
+            - asc
+            - desc
           default: asc
         query_fields:
           xml:
@@ -386,7 +385,7 @@ components:
             inside:
               type: integer
               description: if you want to search inside the bbox or not 0 = normal; 1 = inside)
-              default: '1'
+              default: 1
             author_edmo:
               type: integer
               description: Only one value is possble, See [reference list autor_edmo](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/author_edmo)

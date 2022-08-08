@@ -209,12 +209,12 @@ class MetadataQuery(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            facet_fields ([str]): if multiple options then use comma seperated values, See [reference list facet_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/facet_fields). [optional]  # noqa: E501
-            return_fields ([str]): if multiple options then use comma seperated values, See [reference list return_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/return_fields). [optional]  # noqa: E501
+            facet_fields ([str]): if multiple options then use comma seperated values, See [reference list facet_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/facet_fields). [optional] if omitted the server will use the default value of ["parameters_p08","parameters_p03","parameters_p02"]  # noqa: E501
+            return_fields ([str]): if multiple options then use comma seperated values, See [reference list return_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/return_fields). [optional] if omitted the server will use the default value of ["n_code","dataname","cdi_identifier","c_originator_edmo_country","start_date","end_date","c_inReturn_fieldsEnumument_l05","version","data_format_l24","bbox_north","bbox_east","bbox_south","bbox_west","c_measuring_area_type_l02"]  # noqa: E501
             pagination_page (int): Number of records to return. [optional] if omitted the server will use the default value of 20  # noqa: E501
             pagination_count (int): Number to start from, never larger then records found. [optional] if omitted the server will use the default value of 0  # noqa: E501
-            pagination_sort ([str]): Field used for sorting the response, only one value is allowed, See [reference list pagination_sort](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/pagination_sort). [optional]  # noqa: E501
-            pagination_sort_type ([str]): Field use for sorting the response, only one value is allowed. [optional]  # noqa: E501
+            pagination_sort (str): Field used for sorting the response, only one value is allowed, See [reference list pagination_sort](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/pagination_sort). [optional] if omitted the server will use the default value of "n_code"  # noqa: E501
+            pagination_sort_type (str): Field use for sorting the response, only one value is allowed. [optional] if omitted the server will use the default value of "asc"  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 
@@ -301,12 +301,12 @@ class MetadataQuery(ModelNormal):
                                 Animal class but this time we won't travel
                                 through its discriminator because we passed in
                                 _visited_composed_classes = (Animal,)
-            facet_fields ([str]): if multiple options then use comma seperated values, See [reference list facet_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/facet_fields). [optional]  # noqa: E501
-            return_fields ([str]): if multiple options then use comma seperated values, See [reference list return_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/return_fields). [optional]  # noqa: E501
+            facet_fields ([str]): if multiple options then use comma seperated values, See [reference list facet_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/facet_fields). [optional] if omitted the server will use the default value of ["parameters_p08","parameters_p03","parameters_p02"]  # noqa: E501
+            return_fields ([str]): if multiple options then use comma seperated values, See [reference list return_fields](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/return_fields). [optional] if omitted the server will use the default value of ["n_code","dataname","cdi_identifier","c_originator_edmo_country","start_date","end_date","c_inReturn_fieldsEnumument_l05","version","data_format_l24","bbox_north","bbox_east","bbox_south","bbox_west","c_measuring_area_type_l02"]  # noqa: E501
             pagination_page (int): Number of records to return. [optional] if omitted the server will use the default value of 20  # noqa: E501
             pagination_count (int): Number to start from, never larger then records found. [optional] if omitted the server will use the default value of 0  # noqa: E501
-            pagination_sort ([str]): Field used for sorting the response, only one value is allowed, See [reference list pagination_sort](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/pagination_sort). [optional]  # noqa: E501
-            pagination_sort_type ([str]): Field use for sorting the response, only one value is allowed. [optional]  # noqa: E501
+            pagination_sort (str): Field used for sorting the response, only one value is allowed, See [reference list pagination_sort](https://seadatanet-buffer5.maris.nl/api_v5.1/reference_list/pagination_sort). [optional] if omitted the server will use the default value of "n_code"  # noqa: E501
+            pagination_sort_type (str): Field use for sorting the response, only one value is allowed. [optional] if omitted the server will use the default value of "asc"  # noqa: E501
             query_fields (OrderQueryQueryFields): [optional]  # noqa: E501
         """
 
